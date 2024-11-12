@@ -1,0 +1,46 @@
+/* Apply the background to the entire Learn page */
+.snake {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 20px; /* Space between each item */
+  padding: 20px 2%;
+  background-image: url('../../Assets/background.jpg'); /* Path to background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps background fixed as the content scrolls */
+  background-repeat: no-repeat;
+}
+
+/* Individual image container styling */
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.images:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Image styling */
+.images img {
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image fills the box without distortion */
+  border-radius: 5px;
+}
+
+/* Title styling */
+.images h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}

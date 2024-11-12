@@ -1,0 +1,48 @@
+.snake-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../Assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    margin-top: -10px;
+  }
+  
+  .snake-info-content {
+    background-color: rgba(255, 255, 255, 0.85); /* Light overlay for better readability */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .snake-info img {
+    width: 80%; /* Responsive size */
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for focus on image */
+    margin-bottom: 20px;
+  }
+  
+  .snake-info h2 {
+    font-size: 28px;
+    margin-top: 10px;
+    color: #444;
+  }
+  
+  .snake-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .snake-info p strong {
+    color: #333;
+  }

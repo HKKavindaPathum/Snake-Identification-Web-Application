@@ -1,0 +1,18 @@
+.dropzone {
+    border: 3px dashed #33db2e;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .dropzone p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #16cb40;
+    color: #c6c7c6;
+  }
+  
+  .FileUploadedText p{
+    color: white;
+  }
