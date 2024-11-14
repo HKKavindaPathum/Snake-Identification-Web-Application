@@ -1,73 +1,91 @@
-/* Output.css */
-
 .output {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  color: white;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.6); /* Add a dark overlay to the background image */
-  padding: 20px;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../../Assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
 }
 
-.uploaded-image {
+.output-content{
+  background-color: rgba(0, 0, 0, 0.735);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+  max-width: 800px;
+  width: 90%;
+  margin: 30px;
+  display:grid;
+  place-items: center;
+}
+.output-content h1{
+  font-size: 35px;
+  margin-top: 10px;
+  color: #fffafa;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.uploaded-image{
   max-width: 300px;
   max-height: 300px;
   margin-top: 20px;
-  border: 4px solid white;
+  border: 2px solid white;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 5px black;
+.output-details p{
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px 0;
+  display: grid;  /* Use grid to create two columns */
+  grid-template-columns: 1fr 2fr;  /* First column for strong (left), second for span (right) */
+  width: 100%;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-top: 20px;
-  color: #ffcc00;
-  text-shadow: 2px 2px 5px black;
+.output-details p strong,
+.output-details p span {
+  display: block;
+  text-align: left;
 }
 
-.snake-details {
-  list-style-type: none;
-  padding: 0;
-  font-size: 1.5rem;
-  margin-top: 20px;
-}
+.output-details p strong {
+  color: #ffffff;
 
-.snake-details li {
-  margin-bottom: 10px;
-}
+} 
 
-.snake-details strong {
-  color: #ffcc00;
+.output-details p span{
+  color: #ffffffce;
 }
+@media (max-width: 750px){
 
-@media screen and (max-width: 768px) {
-  .output {
-    padding: 10px;
+  .output-content h1{
+    font-size: 28px;
+    margin-top: -10px;
   }
 
-  h1 {
-    font-size: 2rem;
+  .output-details p{
+    font-size: 15px;
+    line-height: 1.0; 
+  }
+  
+}
+
+@media (max-width: 450px){
+  .output-content h1{
+    font-size: 23px;
+    margin-top: -20px;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .uploaded-image {
-    max-width: 200px;
-    max-height: 200px;
-  }
-
-  .snake-details {
-    font-size: 1.2rem;
+  .output-details p{
+    font-size: 13px;
+    line-height: 1.0;
+    display: grid;  
+    grid-template-columns: 2fr 2fr; 
   }
 }

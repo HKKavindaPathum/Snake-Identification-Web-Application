@@ -1,12 +1,9 @@
-/* Navbar.css */
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(45deg, rgb(1, 85, 1), rgb(169, 169, 5)); /* Gradient background */
+  background: linear-gradient(45deg, rgb(1, 85, 1), rgb(169, 169, 5)); 
   padding: 1rem;
-  color: #fff; /* Text color */
   font-family: Arial, sans-serif;
   height: 60px;
 }
@@ -17,73 +14,119 @@
 }
 
 .nav-logo-img {
-  width: 80px; /* Logo size */
-  height: auto; /* Maintain aspect ratio */
-  margin-left: 50px; /* Space on the left of the logo */
-  margin-right: 20px; /* Space between logo and text */
+  width: 80px;
+  height: auto; 
+  margin-left: 50px; 
+  margin-right: 20px; 
 }
 
 .nav-logo-text {
-  font-size: 1.5rem; /* Font size for logo text */
-  font-weight: bold; /* Bold font */
-  font-style: italic; /* Italic font style */
-  color: #b8f941d4; /* Logo text color */
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #b8f941d4;
 }
 
 .nav-menu {
-  list-style: none; /* Remove default list styles */
-  display: flex; /* Flexbox for horizontal alignment */
-  margin-right: 50px; /* Space on the right of the menu */
+  list-style: none;
+  display: flex;
+  margin-right: 50px;
 }
 
 .nav-menu li {
-  margin-left: 1rem; /* Space between menu items */
+  margin-left: 1rem;
 }
 
 .nav-link {
-  color: #307b05; /* Link text color */
-  text-decoration: none; /* Remove underline */
-  font-size: 1rem; /* Font size for links */
-  display: flex; /* Flexbox for icon and text alignment */
-  align-items: center; /* Center vertically */
-  padding: 10px; /* Padding for better touch targets */
-  margin-bottom: -10px; /* Adjust margin for visual alignment */
-  border-radius: 4px; /* Rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  color: #307b05;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: -10px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background on hover */
-  color: #147bf1; /* Change text color on hover */
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #147bf1;
+}
+
+.nav-toggle {
+  display: none;
 }
 
 .nav-menu hr {
-  border: none; /* Remove default border */
-  width: 80%; /* Width of the underline */
-  height: 3px; /* Height of the underline */
-  border-radius: 10px; /* Rounded corners */
-  background: #ff4141; /* Color of the underline */
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #ff4141;
 }
 
 .nav-link svg {
-  margin-right: 0.5rem; /* Space between icon and text */
+  margin-right: 0.5rem;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .navbar {
-    align-items: center;
-    flex-direction: column; /* Stack items vertically */
-    height: 250px;
+
+.nav-menu.active {
+  display: block;
+  width: 50%;
+  background-color: #00000096; 
+  position: absolute; 
+  top: 66px; 
+  left: 0; 
+  padding-top: 10px; 
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.546);  
+  border-radius: 5px;   
+}
+
+
+@media (max-width: 600px) {
+  .navbar { 
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between; 
+  }
+ 
+  .nav-logo-img {
+    width: 60px;
+    margin-left: 20px;
+  }
+
+  .nav-logo-text {
+    font-size: 1.2rem;
   }
 
   .nav-menu {
-    flex-direction: column; /* Stack menu items vertically */
-    width: 100%; /* Full width */
+    display: none;
+    padding: 0;
   }
 
-  .nav-menu li {
-    margin: 0.5rem 0; /* Space between stacked items */
+
+  .nav-link {
+    font-size: 15px; 
+    color: white;
+    padding-bottom: 20px;
+  }
+
+  .nav-toggle {
+    color: black;
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+
+  .nav-menu hr {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: grid; 
+    place-items: right;
+    width: 120px;
   }
 }
-

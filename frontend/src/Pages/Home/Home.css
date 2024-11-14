@@ -11,37 +11,41 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  background-color: rgba(0, 0, 0, 0.5); /* Adding a background to make text readable */
+  background-color: rgba(0, 0, 0, 0.683); /* Adding a background to make text readable */
   border-radius: 10px;
 }
 
 .App-header h1 {
   font-size: 2.5rem;
-  color: #16cb40;
+  color: #fffffffe;
   margin: 20px 0;
 }
 
 .buttons-container {
   margin-top: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 button {
-  background-color: #16cb40;
+  background-color: #058723;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
-  margin-right: 10px;
 }
 
 button:last-child {
   margin-right: 0;
 }
 
-button:hover {
+.search button:hover {
   background-color: #0056b3;
+}
+.clear button:hover {
+  background-color: #e70404;
 }
 
 .image-preview {
@@ -63,3 +67,46 @@ button:hover {
   margin-top: 10px;
 }
 
+@media (max-width:750px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .App-header {
+    font-size: calc(6px + 2vmin);
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .preview-image {
+    max-width: 80%;
+    max-height: 250px; 
+    margin-top: 0;
+  }
+}
+
+@media (max-width:550px) {
+  .App-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .preview-image {
+    max-width: 80%;
+    max-height: 200px; 
+    margin-top: 0;
+  }
+}
+
+@media (max-width:450px) {
+  .App-header h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 0.6rem;
+  }
+}

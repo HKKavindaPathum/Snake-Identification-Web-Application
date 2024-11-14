@@ -43,7 +43,7 @@ export const Home = () => {
   return (
     <div className="App" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <header className="App-header">
-        <h1>Upload Your Image Here</h1>
+        <h1>Upload Snake Image Here</h1>
         
         {/* FileDropBox for uploading */}
         <FileDropBox clearImage={clearImage} setClearImage={setClearImage} setUploadedFile={setUploadedFile} />
@@ -57,8 +57,12 @@ export const Home = () => {
         )}
 
         <div className="buttons-container">
+          <div className='search'>
           <button onClick={handleSearchClick}>Search</button>
+          </div>
+          <div className='clear'>
           <button onClick={handleClearClick}>Clear</button>
+          </div>
         </div>
       </header>
     </div>

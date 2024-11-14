@@ -1,48 +1,94 @@
 .snake-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url('../../Assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../../Assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  margin-top: -10px;
+}
+
+.snake-info-content {
+  background-color: rgba(0, 0, 0, 0.735);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+  max-width: 800px;
+  width: 90%;
+  margin: 30px;
+  display:grid;
+  place-items: center;
+}
+
+.snake-info img {
+  width: 80%;   
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 12px rgba(255, 255, 255, 0.372);
+  margin-bottom: 20px;
+}
+
+.snake-info h2 {
+  font-size: 35px;
+  margin-top: 10px;
+  color: #fffafa;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.snake-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px 0;
+  display: grid;  /* Use grid to create two columns */
+  grid-template-columns: 1fr 2fr;  /* First column for strong (left), second for span (right) */
+  width: 100%;
+}
+
+.snake-info-text p strong,
+.snake-info-text p span {
+  display: block;
+  text-align: left;
+}
+
+.snake-info p strong {
+  color: #ffffff;
+
+} 
+
+.snake-info p span{
+  color: #ffffffce;
+}
+
+@media (max-width: 750px){
+
+  .snake-info h2{
+    font-size: 28px;
+    margin-top: 5px;
+  }
+
+  .snake-info p {
+    font-size: 15px;
+    line-height: 1.0;
+
+  }
+}
+
+@media (max-width: 450px){
+
+  .snake-info h2{
+    font-size: 20px;
     margin-top: -10px;
   }
-  
-  .snake-info-content {
-    background-color: rgba(255, 255, 255, 0.85); /* Light overlay for better readability */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
-    max-width: 600px;
-    width: 90%;
-    text-align: center;
-  }
-  
-  .snake-info img {
-    width: 80%; /* Responsive size */
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for focus on image */
-    margin-bottom: 20px;
-  }
-  
-  .snake-info h2 {
-    font-size: 28px;
-    margin-top: 10px;
-    color: #444;
-  }
-  
+
   .snake-info p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 10px 0;
-    color: #555;
+    font-size: 12px;
+    line-height: 1.0;
+    display: grid;  /* Use grid to create two columns */
+    grid-template-columns: 2fr 2fr; 
+
   }
-  
-  .snake-info p strong {
-    color: #333;
-  }
+}
