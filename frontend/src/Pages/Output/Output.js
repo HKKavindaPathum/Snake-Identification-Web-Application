@@ -36,4 +36,4 @@ const Output = () => {
   );
 };
 
-export default Output;  // Change this to default export
+export default Output;  

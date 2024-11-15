@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image as keras_image
 from PIL import Image
 import io
-from snake_info import snake_data  # Importing snake data
+from snake_info import snake_data 
 
 app = Flask(__name__)
 

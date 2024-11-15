@@ -87,7 +87,7 @@
   .snake-info p {
     font-size: 12px;
     line-height: 1.0;
-    display: grid;  /* Use grid to create two columns */
+    display: grid; 
     grid-template-columns: 2fr 2fr; 
 
   }

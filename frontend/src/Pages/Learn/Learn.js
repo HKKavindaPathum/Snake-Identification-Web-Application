@@ -55,7 +55,7 @@ export const Learn = () => {
     { src: snake23, name: "Sri Lanka pipe snake" },
     { src: snake24, name: "Sri Lankan Rock Python" },
   
-    // Add other images and names as necessary
+
   ];
 
   const handleImageClick = (name) => {
